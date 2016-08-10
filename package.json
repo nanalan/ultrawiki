@@ -1,0 +1,25 @@
+{
+  "name": "ultrawiki",
+  "version": "0.0.1",
+  "description": "A lightweight MediaWiki alternative",
+  "main": "lib/ultra.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanalan/ultrawiki.git"
+  },
+  "keywords": [
+    "wiki",
+    "wikipedia",
+    "mediawiki",
+    "lightweight",
+    "docs",
+    "documentation"
+  ],
+  "author": "Alex Bates",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nanalan/ultrawiki/issues"
+  },
+  "homepage": "https://github.com/nanalan/ultrawiki#readme",
+  "dependencies": {}
+}

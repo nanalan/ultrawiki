@@ -1,2 +1,2 @@
 # UltraWiki
-> A lightweight MediaWiki alternative written in Node.js
+> A lightweight [MediaWiki](https://github.com/wikimedia/mediawiki) alternative written in Node.js.
