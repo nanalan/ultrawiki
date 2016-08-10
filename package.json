@@ -1,6 +1,6 @@
 {
   "name": "ultrawiki",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A lightweight MediaWiki alternative",
   "main": "lib/ultra.js",
   "repository": {
@@ -21,5 +21,9 @@
     "url": "https://github.com/nanalan/ultrawiki/issues"
   },
   "homepage": "https://github.com/nanalan/ultrawiki#readme",
-  "dependencies": {}
+  "dependencies": {
+    "markdown-it": "^7.0.0",
+    "mustache": "^2.2.1",
+    "titlecase": "^1.1.2"
+  }
 }
