@@ -7,39 +7,43 @@
 <link href='https://fonts.googleapis.com/css?family=Copse|Open+Sans:400,400i,600,600i' rel='stylesheet'>
 
 <main>
-  {{{body}}}
+  {{{page.body}}}
 </main>
 
 <nav>
-  <!-- TODO: make this configurable -->
-
-  <header>{{wiki.name}}</header>
+  <header><a href='/{{page.language}}/'>{{wiki.name}}</a></header>
 
   <ul>
-    <li><a href='/main'>
-      Main page
-    </a></li>
+    {{#wiki.links}}
+      <li><a href='{{1}}'>
+        {{0}}
+      </a></li>
+    {{/wiki.links}}
   </ul>
 
-  <section>
-    <h4>Section</h4>
+  {{#wiki.navigation}}
+    <section>
+      <h4>{{0}}</h4>
 
-    <ul>
-      <li><a>link</a></li>
-      <li><a>other link</a></li>
-      <li><a>etc</a></li>
-    </ul>
-  </section>
+      <ul>
+        {{#1}}
+          <li><a href='/{{page.language}}/{{1}}'>{{0}}</a></li>
+        {{/1}}
+      </ul>
+    </section>
+  {{/wiki.navigation}}
 
-  <section>
-    <h4>Other Section</h4>
+  {{#wiki.hasOtherLanguages}}
+    <section>
+      <h4>In Other Languages</h4>
 
-    <ul>
-      <li><a>link</a></li>
-      <li><a>other link</a></li>
-      <li><a>etc</a></li>
-    </ul>
-  </section>
+      <ul>
+        {{#wiki.languages}}
+          <li><a href='/{{1}}/{{page.what}}'>{{0}}</a></li>
+        {{/wiki.languages}}
+      </ul>
+    </section>
+  {{/wiki.hasOtherLanguages}}
 </nav>
 
 <script src='/skin/default.js'></script>
