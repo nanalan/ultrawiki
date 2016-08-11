@@ -1,9 +1,11 @@
+'use strict'
+
 const ultrawiki = require('./lib/ultra')
 const express = require('express')
 const app = express()
 
 // some config
-ultrawiki.name = 'UltraWiki'
+ultrawiki.name = 'My Awesome Wiki'
 ultrawiki.skin = 'default'
 ultrawiki.path = __dirname + '/wiki'
 ultrawiki.mainPage = 'welcome'
