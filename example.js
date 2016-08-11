@@ -9,7 +9,7 @@ ultrawiki.name = 'My Awesome Wiki'
 ultrawiki.skin = 'default'
 ultrawiki.path = __dirname + '/wiki'
 ultrawiki.mainPage = 'welcome'
-ultrawiki.languages = ['en', 'fr']
+ultrawiki.languages = ['en'/*, 'fr'*/]
 ultrawiki.navigation = [
   ['Section', [
     ['Some Other Page', 'some-other-page']
