@@ -1,14 +1,20 @@
 const ultrawiki = require('./lib/ultra')
-const http = require('http')
+const express = require('express')
+const app = express()
 
-http.createServer((req, res) => {
-  let page = req.url.substr(1) // ignore the leading slash
+// some config
+ultrawiki.name = 'My Wiki'
+ultrawiki.skin = 'default'
+ultrawiki.path = __dirname + '/wiki'
+ultrawiki.languages = ['en']
 
-  // let UltraWiki do the rest
-  // (you can use node-style callbacks or Promises)
-  ultrawiki.page(page).then(([ body, type ]) => {
-    res.writeHead(200, { 'Content-Type': type })
-    res.write(body)
-    res.end()
-  }).catch(err => console.error(err))
-}).listen(9999)
+// use the UltraWiki http middleware
+app.use(ultrawiki.middleware)
+
+// else 404s
+app.all('*', (req, res) => {
+  res.status(404).send('<code>UltraWiki cannot ' + req.method + ' ' + req.url + '</code>')
+})
+
+app.listen(9999)
+console.log('\u001b[1mUltraWiki\u001b[22m listening on \u001b[36mhttp://localhost:9999\u001b[39m...')
