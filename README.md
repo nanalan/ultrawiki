@@ -5,7 +5,7 @@
 **The easy way** using `bash` (Linux / Mac):
 ```sh
 $ cd my-awesome-wiki
-$ if [[ ! -f package.json ]]; then echo '{ "private":true }' >> package.json; fi; npm install --save ultrawiki express && mkdir wiki && curl -fsSL https://github.com/nanalan/ultrawiki/raw/master/example.js >> wiki.js && perl -pi -e "s/\'\.\/lib\/ultra\'/\'ultrawiki\'/g" wiki.js && mkdir wiki/en && echo '# Welcome to [My Wiki](/)!' >> wiki/en/welcome.md && node wiki.js
+$ echo 'Installing UltraWiki...' && if [[ ! -f package.json ]]; then echo '{ "private":true }' >> package.json; fi; npm install --save ultrawiki express > /dev/null && mkdir wiki && curl -fsSL https://github.com/nanalan/ultrawiki/raw/master/example.js >> wiki.js && perl -pi -e "s/\'\.\/lib\/ultra\'/\'ultrawiki\'/g" wiki.js && mkdir wiki/en && echo '# Welcome to [My Wiki](/)!' >> wiki/en/welcome.md && node wiki.js
 # visit http://localhost:9999 in a web browser
 ```
 
