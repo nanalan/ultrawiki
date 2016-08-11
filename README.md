@@ -9,7 +9,7 @@ $ if [[ ! -f package.json ]]; then echo "{}" >> package.json; fi; npm install --
 # visit http://localhost:9999 in a web browser
 ```
 
-**The hard way** using `manual labor` (Windows):
+**The hard way** using `manual labor` (Windows):  
 1. Open up a folder (say, `my-awesome-wiki`) in `Files`, `Finder`, or `My Documents`
 2. Make a `package.json` file
 3. In `Command Prompt` or `Terminal`, navigate to that folder and run `npm install --save ultrawiki`
